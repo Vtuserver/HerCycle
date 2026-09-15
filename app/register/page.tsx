@@ -1,0 +1,2 @@
+import Link from "next/link"; import {RegisterForm} from "@/components/AuthForms";
+export default function Register(){return <main className="page"><div className="container" style={{maxWidth:480}}><div className="card"><h1>Create HerCycle</h1><p className="muted">Start your personal cycle journal.</p><RegisterForm/><p className="small muted">Already registered? <Link href="/login" style={{color:"var(--plum)"}}>Log in</Link></p></div></div></main>}

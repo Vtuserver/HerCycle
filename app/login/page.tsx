@@ -1,0 +1,2 @@
+import Link from "next/link"; import {LoginForm} from "@/components/AuthForms";
+export default function Login(){return <main className="page"><div className="container" style={{maxWidth:480}}><div className="card"><h1>Welcome back</h1><p className="muted">Log in to your HerCycle account.</p><LoginForm/><p className="small muted">New here? <Link href="/register" style={{color:"var(--plum)"}}>Create an account</Link></p></div></div></main>}

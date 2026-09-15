@@ -1,0 +1,2 @@
+import {redirect} from "next/navigation"; import {auth} from "@/auth"; import LogClient from "@/components/LogClient";
+export default async function Log(){if(!(await auth())?.user?.id)redirect("/login");return <main className="page"><div className="container" style={{maxWidth:720}}><h1>Log an entry</h1><p className="muted" style={{marginBottom:20}}>Record your period or daily symptoms.</p><LogClient/></div></main>}
