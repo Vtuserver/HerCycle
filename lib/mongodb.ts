@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const uri = process.env.MONGODB_URI;
-if (!uri) throw new Error("MONGODB_URI is not set");
+// if (!uri) throw new Error("MONGODB_URI is not set");
+if (!uri) {throw new Error("Please define the MONGODB_URI enviroment variable");}
 declare global { var mongooseCache: { conn: typeof mongoose | null; promise: Promise<typeof mongoose> | null } | undefined; }
 const cached = global.mongooseCache ?? { conn:null, promise:null };
 global.mongooseCache = cached;
